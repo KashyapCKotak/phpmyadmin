@@ -5025,6 +5025,7 @@ function toggleDatepickerIfInvalid($td, $input_field) {
  */
 function loginButtonEnable() {
     $('#input_go').prop('disabled', false);
+	document.getElementById("login_form").submit();
 }
 
 /*
@@ -5033,6 +5034,14 @@ function loginButtonEnable() {
 function loginButtonDisable() {
     $('#input_go').prop('disabled', true);
 }
+
+/*
+ * Function to submit the form on data-callback
+ */
+function onLoginGo() {
+    document.getElementById("login_form").submit();
+}
+
 
 /**
  * Unbind all event handlers before tearing down a page
